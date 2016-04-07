@@ -15,9 +15,6 @@
 <body>
 
   <nav>
-    <div id="menubar" class="nav-wrapper">
-    <a href="#" class="brand-logo center">Project Blue Sparkles</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-      </ul>
+    <div id="menubar" class="nav-wrapper z-depth-1">
     </div>
   </nav>
