@@ -1,0 +1,1 @@
+# A basic commection for php and mysql using PDO
