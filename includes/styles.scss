@@ -1,0 +1,57 @@
+$primary-color-dark:   #388E3C;
+$primary-color:        #4CAF50;
+$primary-color-light:  #C8E6C9;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FF9800;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
+$background-color:     #EEE;
+
+///////////////////////////////
+// Globals
+///////////////////////////////
+
+body {
+	background-color: $background-color;
+}
+
+///////////////////////////////
+// Header
+///////////////////////////////
+
+nav #menubar {
+	background-color: $primary-color;
+	a {
+		font-size: 1em;
+	}
+}
+
+// Header well
+
+#header-well {
+	background-color: $primary-color-light;
+	.container {
+		min-height: 300px;
+	}
+}
+
+///////////////////////////////
+// Body
+///////////////////////////////
+
+.body.card {
+	min-height: 300px;
+}
+
+.container.main {
+	margin-top: -50px;
+}
+
+///////////////////////////////
+// Footer
+///////////////////////////////
+
+footer.page-footer {
+	background-color: $primary-color;
+}
