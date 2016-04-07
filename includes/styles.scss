@@ -12,8 +12,26 @@ $background-color:     #EEE;
 // Globals
 ///////////////////////////////
 
+h1, h2, h3, h4, h5, h6, p {
+	color: $primary-text-color;
+}
+
 body {
+
 	background-color: $background-color;
+	ul, ol {
+		padding-left: 50px!important;
+	}
+	hr {
+		margin-bottom: 30px;
+	}
+	a.btn {
+		background-color: $accent-color;
+		&:hover {
+			background-color: $accent-color;
+			opacity: 0.5;
+		}
+	}
 }
 
 ///////////////////////////////
@@ -31,8 +49,9 @@ nav #menubar {
 
 #header-well {
 	background-color: $primary-color-light;
+	padding-bottom: 50px; // Compensating for the -50 of the card
 	.container {
-		min-height: 300px;
+		min-height: 200px;
 	}
 }
 
@@ -48,10 +67,30 @@ nav #menubar {
 	margin-top: -50px;
 }
 
+// Questions
+
+.questions {
+	.answer {
+		margin: 10px 0;
+	}
+
+}
+
 ///////////////////////////////
 // Footer
 ///////////////////////////////
 
 footer.page-footer {
 	background-color: $primary-color;
+}
+
+// Make footer stick to bottom
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
 }

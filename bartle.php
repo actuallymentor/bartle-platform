@@ -2,7 +2,6 @@
 REQUIRE ( 'includes/header.php' ); 
 ?>
 
-
 <!-- HTML segment start -->
 
 <!-- Header well -->
@@ -16,16 +15,11 @@ REQUIRE ( 'includes/header.php' );
 <div class="container main">
 	<div class="row">
 		<div class="body card">
-			<div class="card-content">
-				<h3 class="center-align">Thank you for participating</h3>
+			<div class="questions card-content">
+				<h3 id="question" class="center-align">Question</h3>
 				<hr class="col l8 offset-l2 m10 offset-m1 s12" />
-				<p class="col l8 offset-l2 m10 offset-m1 s12">This test consists out of 2 parts:</p>
-
-				<ol class="col l4 offset-l2 m10 offset-m1 s12">
-					<li>A brief questionnaire</li>
-					<li>A simple task</li>
-				</ol>
-				<a href="bartle.php" class="col l4 waves-effect waves-light btn">Start Test</a>
+				<a id="option-1" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">Option 1</a>
+				<a id="option-1" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">Option 2</a>
 			</div>
 		</div>
 	</div>
