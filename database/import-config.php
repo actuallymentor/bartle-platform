@@ -4,9 +4,8 @@
 ///////////////////
 // Get the ini file
 ///////////////////
-
 shell_exec ( 'touch config.ini' ); 
-$config = parse_ini_file( 'config.ini' );
+$config = parse_ini_file( 'database/config.ini' );
 
 // Error logging function
 
