@@ -1,1 +1,3 @@
-# A basic commection for php and mysql using PDO
+# A Bartle test system
+
+Using this for a research project
