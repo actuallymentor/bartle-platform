@@ -7,6 +7,7 @@ REQUIRE ( 'includes/header.php' );
 
 <!-- HTML segment start -->
 
+<div>Hello</div>
 
 <!-- HTML segment start -->
 
