@@ -1,12 +1,24 @@
 var questions = [
-	{
-		"question": "Are you sir?",
-		"answer1": "yes",
-		"answer2": "no"
+{
+	"question": "Are you sir?",
+	"answer1": {
+		"text": "yes",
+		"value": "1"
 	},
-	{
-		"question": "Are you madamme?",
-		"answer1": "yes",
-		"answer2": "no"
+	"answer2": {
+		"text": "no",
+		"value": "0"
 	}
+},
+{
+	"question": "Are you madamme?",
+	"answer1": {
+		"text": "yes",
+		"value": "1"
+	},
+	"answer2": {
+		"text": "no",
+		"value": "0"
+	}
+}
 ]
