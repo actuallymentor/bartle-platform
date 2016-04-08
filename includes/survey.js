@@ -1,17 +1,5 @@
-var questions = [
-	{
-		"question": "Are you sir?",
-		"answer1": "yes",
-		"answer2": "no"
-	},
-	{
-		"question": "Are you madamme?",
-		"answer1": "yes",
-		"answer2": "no"
-	}
-]
 var progress = [
-	{ question_nr: 0 },
+	{ "question_nr": 0 },
 	{ "answers": 0 }
 ]
 

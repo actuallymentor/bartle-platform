@@ -17,15 +17,21 @@ REQUIRE ( 'includes/header.php' );
 	<div class="row">
 		<div class="body card">
 			<div class="card-content">
-				<h3 class="center-align">Thank you for participating</h3>
-				<hr class="col l8 offset-l2 m10 offset-m1 s12" />
-				<p class="col l8 offset-l2 m10 offset-m1 s12">This test consists out of 2 parts:</p>
+				<div class="row">
+					<h3 class="center-align">Thank you for participating</h3>
+					<p class="subtitle center-align">This research activity will only take minutes</p>
+					<br />
+					<hr class="col l8 offset-l2 m10 offset-m1 s12" />
+					<p class="col l8 offset-l2 m10 offset-m1 s12">This test consists out of 2 parts:</p>
 
-				<ol class="col l4 offset-l2 m10 offset-m1 s12">
-					<li>A brief questionnaire</li>
-					<li>A simple task</li>
-				</ol>
-				<a href="bartle.php" class="col l4 waves-effect waves-light btn">Start Test</a>
+					<ol class="col l4 offset-l2 m10 offset-m1 s12">
+						<li>A brief questionnaire</li>
+						<li>A simple task</li>
+					</ol>
+					<a href="bartle.php" class="col l4 waves-effect waves-light btn">Start Test</a>
+					<hr class="col l8 offset-l2 m10 offset-m1 s12" />
+					<p class="vague center col l8 offset-l2 m10 offset-m1 s12">For questions contact mentor (at) palokaj.co</p>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -12,6 +12,8 @@ body {
     body a.btn:hover {
       background-color: #FF9800;
       opacity: 0.5; }
+  body .vague {
+    opacity: 0.5; }
 
 nav #menubar {
   background-color: #4CAF50; }
@@ -22,7 +24,7 @@ nav #menubar {
   background-color: #C8E6C9;
   padding-bottom: 50px; }
   #header-well .container {
-    min-height: 200px; }
+    min-height: 100px; }
 
 .body.card {
   min-height: 300px; }
