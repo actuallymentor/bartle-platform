@@ -1,1 +1,1 @@
-sass --watch includes/styles.scss:includes/styles.css
+sass --watch includes/css/styles.scss:includes/css/styles.css

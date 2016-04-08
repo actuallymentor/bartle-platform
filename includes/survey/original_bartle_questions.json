@@ -1,0 +1,269 @@
+[
+{
+
+	"question": "Are you more comfortable, as a player on a MUD:",
+	"one": {
+		"text": "Talking with friends in a tavern?",
+		"value": "S"
+	},
+	"two": {
+		"text": "Out hunting orcs by yourself for experience?",
+		"value": "A"
+	}
+
+}
+{
+
+	"question": "Which is more enjoyable to you?",
+	"one": {
+		"text": "Killing a big monster",
+		"value": "A"
+	},
+	"two": {
+		"text": "Bragging about it to your friends?",
+		"value": "S"
+	}
+
+}
+{
+
+	"question": "Which do you enjoy more in MUD quests:",
+	"one": {
+		"text": "Getting involved in the storyline",
+		"value": "S"
+	},
+	"two": {
+		"text": "Getting the rewards at the end?",
+		"value": "A"
+	}
+
+}
+{
+
+	"question": "Which would you rather be noticed for on a MUD?:",
+	+A Your equipment
+	+S Your personality
+
+}
+{
+
+	"question": "Would you rather be:",
+	+S Popular
+	+A Wealthy
+
+}
+{
+
+	"question": "Which do you enjoy more on a MUD?:",
+	+S Getting the latest gossip
+	+A Getting a new item
+
+}
+{
+
+	"question": "Which would you rather have, as a player on a MUD?:",
+	+S A private channel, over which you and your friends can communicate
+	+A Your own house, worth millions of gold coins
+
+}
+{
+	"question": "Which would you enjoy more as a MUD player?",
+	+S Running your own tavern?
+	+E Making your own maps of the world, then selling them?
+
+}
+{
+
+	"question": "What's more important in a MUD to you?",
+	+S The number of people
+	+E The number of areas to explore
+
+}
+{
+
+	"question": "What's more important to you:",
+	+S The quality of roleplaying in a mud
+	+E The uniqueness of the features, and game mechanic
+
+}
+{
+
+	"question": "You are being chased by a monster on a MUD. Do you:",
+	+S Ask a friend for help in killing it
+	+E Hide somewhere you know the monster won't follow
+
+}
+{
+	"question": "You're a player on a mud, and you want to fight a really tough dragon. How would you approach this problem?",
+	+S Get a big group of players to kill it.
+	+E Try a variety of weapons and magic against it, until you find its weakness.
+
+}
+{
+	"question": "You're a player on a mud, and about to go into an unknown dungeon.",
+	You have your choice of one more person for your party.
+	Do you bring:
+	+S A bard, who's a good friend of yours and who's great for entertaining you and your friends
+	+E A wizard, to identify the items that you find there
+
+}
+{
+	"question": "Is it better to be:",
+	+K Feared
+	+S Loved
+
+}
+{
+	"question": "Someone has PK'ed you. Do you want to:",
+	+S Find out why, and try to convince them not to do it again
+	+K Plot your revenge
+
+}
+{
+	"question": "Which is more exciting?",
+	+S A well-roleplayed scenario
+	+K A deadly battle
+
+}
+{
+	"question": "Which would you enjoy more?",
+	+K Winning a duel with another player
+	+S Getting accepted by a clan
+
+}
+{
+	"question": "Would you rather",
+	+K Vanquish your enemies
+	+S Convince your enemies to work for you, not against you
+
+}
+{
+	"question": "What's worse:",
+	+K To be without power
+	+S To be without friends
+
+}
+{
+	"question": "Would you rather:",
+	+S Hear what someone has to say
+	+K Show them the sharp blade of your axe
+
+}
+{
+
+	"question": "On a MUD, a new area opens up. Which do you look forward to more?",
+	+E Exploring the new area, and finding out its history
+	+A Being the first to get the new equipment from the area
+
+}
+{
+	"question": "On a MUD, would you rather be known as:",
+	+E Someone who can run from any two points in the world, and really knows their way around.
+	+A The person with the best, most unique equipment in the game
+
+}
+{
+	"question": "Would you rather:",
+	+A Become a hero faster than your friends
+	+E Know more secrets than your friends?
+
+}
+{
+	"question": "Would you rather:",
+	+E Know where to find things
+	+A Know how to get things?
+
+}
+{
+	"question": "Which would you rather do:",
+	+E Solve a riddle no one else has gotten
+	+A Getting to a certain experience level faster than anyone else
+
+}
+{
+	"question": "Do you tend to:",
+	+E Know things no one else does
+	+A Have items no one else does
+
+}
+{
+	"question": "On a MUD, would rather join a clan of:",
+	+E Scholars
+	+K Assassins
+
+}
+{
+	"question": "Would you rather win:",
+	+E A trivia contest
+	+K An arena battle
+
+}
+{
+	"question": "If you're alone in an area, do you think:",
+	+E It's safe to explore
+	+K You'll have to look elsewhere for prey
+
+}
+{
+	"question": "On a MUD, would rather be known for",
+	+E Knowledge
+	+K Power
+
+}
+{
+	"question": "Would you rather:",
+	+K Defeat an enemy
+	+E Explore a new area
+
+}
+{
+	"question": "You learn that another player is planning your demise.",
+	Do you:
+	+E Go to an area your opponent is unfamiliar with and prepare there
+	+K Attack him before he attacks you
+
+}
+{
+	"question": "You meet a new player. Do you think of him as:",
+	+E Someone who can appreciate your knowledge of the game
+	+K As potential prey
+
+}
+{
+	"question": "On a mud, would you rather:",
+	+A Have a sword twice as powerful as any other in the game
+	+K Be the most feared person in the game
+
+}
+{
+	"question": "On a mud, would you be more prone to brag about:",
+	+K How may other players you've killed
+	+A Your equipment
+
+}
+{
+	"question": "Would you rather have:",
+	+K A spell to damage other players
+	+A A spell that increases the rate at which you gain experience points?
+
+}
+{
+	"question": "Would you rather have:",
+	+A Two levels of experience
+	+K An amulet that increases the damage you do against other players by 10%.
+
+}
+{
+	"question": "Would you rather receive as a quest reward:",
+	+A Experience points
+	+K A wand with 3 charges of a spell that lets you control other players, against their will. (charm person)
+
+}
+{
+	"question": "When playing a video game, is it more fun to:",
+	+A Have the highest score on the list?
+	+K Beat your best friend one-on-one?
+
+}
+{
+	]

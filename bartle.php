@@ -28,8 +28,8 @@ REQUIRE ( 'includes/header.php' );
 <!-- Card wrapper -->
 </div>
 
-<script src="includes/questions.js"></script>
-<script src="includes/survey.js"></script>
+<script src="includes/survey/questions.js"></script>
+<script src="includes//survey/survey.js"></script>
 
 <!-- HTML segment start -->
 
