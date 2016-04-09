@@ -13,6 +13,8 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- TRMPORARY LOCAL INCLUDE -->
+  <script type="text/javascript" src="includes/jquery-2.2.1.min.js"></script>
 </head>
 
 <body>
