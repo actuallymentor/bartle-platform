@@ -35,6 +35,13 @@ REQUIRE ( 'includes/header.php' );
 <script src="includes/survey/questions.js"></script>
 <script src="includes/survey/stroop_colors.js"></script>
 <script src="includes//survey/survey.js"></script>
+<script>
+	// Little wink to any programmers doing the test
+	console.log ( "------------------------------------------------------------------" )
+	console.log ( "Having fun staring at the browser console? Oh you programmer you." )
+	console.log ( "You should check out this SUPER MEGA IMPORTANT LINK: " ) 
+	console.log ( "------------------------------------------------------------------" )
+</script>
 
 <!-- HTML segment start -->
 

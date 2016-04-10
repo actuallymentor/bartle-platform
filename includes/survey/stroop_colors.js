@@ -1,18 +1,18 @@
 var stroop_colors = [
 {
 	"name": "red",
-	"hex": "#EEE"
+	"hex": "red"
 },
 {
 	"name": "blue",
-	"hex": "#EEE"
+	"hex": "blue"
 },
 {
 	"name": "green",
-	"hex": "#EEE"
+	"hex": "green"
 },
 {
 	"name": "purple",
-	"hex": "#EEE"
+	"hex": "purple"
 }
 ]
