@@ -481,6 +481,6 @@ var questions = [
 
 },
 {
-	"question": "Your results are:"
+	"question": "What color is this sentence?"
 }
 ]

@@ -79,6 +79,16 @@ nav #menubar {
 
 }
 
+// Stroop related
+
+a.btn.stroop {
+	background-color: $divider-color;
+	&:hover {
+		background-color: $divider-color;
+		opacity: 0.5;
+	}
+}
+
 ///////////////////////////////
 // Footer
 ///////////////////////////////

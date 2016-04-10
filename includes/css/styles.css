@@ -35,6 +35,12 @@ nav #menubar {
 .questions .answer {
   margin: 10px 0; }
 
+a.btn.stroop {
+  background-color: #B6B6B6; }
+  a.btn.stroop:hover {
+    background-color: #B6B6B6;
+    opacity: 0.5; }
+
 footer.page-footer {
   background-color: #4CAF50; }
 
