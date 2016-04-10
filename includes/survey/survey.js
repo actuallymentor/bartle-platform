@@ -14,7 +14,7 @@ function bartle_test (  ) {
 		if ( this.progress.answered_nr ==  ( questions.length - 1 )  ) {
 			console.log ( 'Last question reached' ) 
 			this.progress.ended = true;
-			stroop_test.updateUI (  ) 
+			stroop_test.takeOver (  ) 
 		} else {
 			$ ( '.answer#one' ).text ( questions[ this.progress.answered_nr ].one.text )
 			$ ( '.answer#two' ).text ( questions[ this.progress.answered_nr ].two.text )
@@ -38,6 +38,11 @@ function stroop_test  (  ) {
 		"answered_nr": 0,
 		"correct_nr": 0,
 		"next_correct": "one"
+	}
+
+	this.takeOver = function (  ) {
+		stroop_test.updateUI (  ) 
+		$ ( "#experiment_message" ).text ( "Continue this task for as long as you like." ) 
 	}
 
 	// Updates the UI to reflect progress
@@ -97,10 +102,11 @@ $ ( '.answer' ).on ( "click", function (  ) {
 	var clicked_element = $ ( this ).attr ( 'id' )
 
 	if  ( !bartle_test.progress.ended ) {
-		
+		// Record input to the Bartle test
 		bartle_test.recordInput ( clicked_element )
 		console.log ( bartle_test.progress )
 	} else {
+		// Record input to the Stroop test
 		stroop_test.recordInput ( clicked_element ) 
 		console.log ( stroop_test.progress ) 
 	}

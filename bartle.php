@@ -23,6 +23,9 @@ REQUIRE ( 'includes/header.php' );
 						<a id="one" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">Option 1 appears here</a>
 						<a id="two" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">Option 2 appears here</a>
 					</div>
+					<div class="row centel" id="content">
+						<p id="experiment_message"></p>
+					</div>
 				</div>
 			</div>
 		</div>
