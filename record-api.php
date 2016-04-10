@@ -1,8 +1,13 @@
 <?php
+
+if  ( !ABSPATH ) { header('location: http://google.com');  } //TODO: Rickroll
+
 REQUIRE ( 'database/connect-database.php' );
 
-echo "Databases: <pre>";
-print_r (  unsafe_query ( 'show databases', $db ) ) ;
-echo "</pre>";
+if  ( $_POST['action'] == "bartle" ) {
+
+}
+
+if  ( $_POST['action'] == "engagament" ) 
 
 ?>

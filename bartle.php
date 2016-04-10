@@ -42,7 +42,7 @@ REQUIRE ( 'includes/header.php' );
 	// Little wink to any programmers doing the test
 	console.log ( "------------------------------------------------------------------" )
 	console.log ( "Having fun staring at the browser console? Oh you programmer you." )
-	console.log ( "You should check out this SUPER MEGA IMPORTANT LINK: " ) 
+	console.log ( "You should check out this SUPER MEGA IMPORTANT LINK: " ) // TODO Rickroll
 	console.log ( "------------------------------------------------------------------" )
 </script>
 
