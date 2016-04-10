@@ -8,8 +8,8 @@ Using this for a research project
 CREATE TABLE Results
 (
 ID int NOT NULL AUTO_INCREMENT,
-Bartle_type varchar(255),
-Interactions varchar(255),
+bartle_type varchar(255),
+interactions varchar(255),
 PRIMARY KEY (ID)
 )
 `
