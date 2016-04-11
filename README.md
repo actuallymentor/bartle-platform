@@ -9,6 +9,7 @@ CREATE TABLE Results
 (
 ID int NOT NULL AUTO_INCREMENT,
 bartle_type varchar(255),
+gamified int(1),
 interactions varchar(255),
 interactions_correct varchar(255),
 killer_quotient varchar(255),

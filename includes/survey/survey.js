@@ -22,6 +22,7 @@ function bartle_test (  ) {
 		"answers": [],
 		"ended": false,
 		"bartle_type": "default",
+		"gamified": 0,
 		"bartle_quotient": {
 			"killer": 0,
 			"achiever": 0,
@@ -34,20 +35,9 @@ function bartle_test (  ) {
 	this.updateUI = function (  ) {
 		$ ( '#question' ).text ( questions[ this.progress.answered_nr ].question )
 
-		if ( this.progress.answered_nr ==  ( questions.length - 1 )  ) {
-			console.log ( 'Last question reached' ) 
-			this.calculateBartleType (  ) 
-			this.submitDatabase ( {
-				"action": "set_bartle",
-				"type": this.progress.bartle_type,
-				"bartle_quotient": this.progress.bartle_quotient
-			} ) 
-			this.progress.ended = true;
-			stroop_test.takeOver (  ) 
-		} else {
-			$ ( '.answer#one' ).text ( questions[ this.progress.answered_nr ].one.text )
-			$ ( '.answer#two' ).text ( questions[ this.progress.answered_nr ].two.text )
-		}
+		$ ( '.answer#one' ).text ( questions[ this.progress.answered_nr ].one.text )
+		$ ( '.answer#two' ).text ( questions[ this.progress.answered_nr ].two.text )
+
 	}
 
 	// Record the answer into the progress object
@@ -55,7 +45,20 @@ function bartle_test (  ) {
 		var givenanswer = questions[ this.progress.answered_nr ][ id ].value
 		this.progress.answers.push ( givenanswer )
 		this.progress.answered_nr ++
-		this.updateUI (  ) 
+		if ( this.progress.answered_nr ==  ( questions.length )  ) {
+			console.log ( 'Last question reached' ) 
+			this.calculateBartleType (  ) 
+			this.submitDatabase ( {
+				"action": "set_bartle",
+				"type": this.progress.bartle_type,
+				"bartle_quotient": this.progress.bartle_quotient,
+				"gamified": this.progress.gamified
+			} ) 
+			this.progress.ended = true
+			stroop_test.takeOver (  ) 
+		} else {
+			this.updateUI (  ) 
+		}
 	}
 
 	// Submit data to database
@@ -80,7 +83,7 @@ function bartle_test (  ) {
 		this.progress.bartle_quotient.socializer =  Math.floor ( bartle_count['S']['length'] / .39 )
 
 		this.progress.bartle_type = '' // TODO Set the highest stpe here
-	
+
 
 
 	}
@@ -97,15 +100,17 @@ function stroop_test  (  ) {
 	}
 
 	this.takeOver = function (  ) {
-		stroop_test.updateUI (  ) 
-		$ ( "#question" ).text ( "Which color is this sentence?" ) 
-		$ ( "#experiment_message" ).text ( "Continue this task for as long as you like." ) 
-		$ ( "#instructions" ).text ( "" ) 
+		$ ( "#question" ).text ( "Instructions" )
+		$ ( "#instructions" ).text ( "You will now be be asked to complete a task. You may continue for as long as you like." ) 
+		$ ( ".answer" ).text ( "" )
+		$ ( "#one" ).text ( "I understand" )
 	}
 
 	// Updates the UI to reflect progress
 	this.updateUI = function (  ) {
 
+		$ ( "#question" ).text ( "Which color is this sentence?" ) 
+		$ ( "#instructions" ).text ( "" ) 
 		var color_right = Math.floor( Math.random() * stroop_colors.length )
 		var color_wrong = Math.floor( Math.random() * stroop_colors.length )
 		var option_order = Math.floor( Math.random() * 2 )

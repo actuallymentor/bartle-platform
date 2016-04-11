@@ -37,6 +37,11 @@ nav #menubar {
 
 .questions .answer {
   margin: 10px 0; }
+.questions hr {
+  margin-bottom: 10px; }
+
+#content #instructions {
+  margin-bottom: 30px; }
 
 footer.page-footer {
   background-color: #4CAF50; }
