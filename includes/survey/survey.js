@@ -101,6 +101,10 @@ function stroop_test  (  ) {
 		$ ( "#instructions" ).text ( "You will now be be asked to complete a task. You may continue for as long as you like." ) 
 		$ ( ".answer" ).text ( "" )
 		$ ( "#one" ).text ( "I understand" )
+		if  ( gamification == true ) {
+			// This variable is created on the bartle.php webpage
+			this.gamify (  ) 
+		} 
 	}
 
 	// Updates the UI to reflect progress
