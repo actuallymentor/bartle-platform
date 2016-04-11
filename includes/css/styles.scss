@@ -31,6 +31,9 @@ body {
 			background-color: $accent-color;
 			opacity: 0.5;
 		}
+		height: auto;
+		line-height: 20px;
+		padding: 10px!important;
 	}
 	.vague {
 		opacity: 0.5;
@@ -54,7 +57,7 @@ nav #menubar {
 	background-color: $primary-color-light;
 	padding-bottom: 50px; // Compensating for the -50 of the card
 	.container {
-		min-height: 100px;
+		min-height: 200px;
 	}
 }
 

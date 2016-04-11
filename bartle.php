@@ -7,6 +7,7 @@ REQUIRE ( 'includes/header.php' );
 <!-- Header well -->
 <div id="header-well" class="row">
 	<div class="container center valign-wrapper">
+
 	</div>
 </div>
 <!-- Header well -->

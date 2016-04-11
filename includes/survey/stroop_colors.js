@@ -14,5 +14,17 @@ var stroop_colors = [
 {
 	"name": "purple",
 	"hex": "purple"
+},
+{
+	"name": "grey",
+	"hex": "grey"
+},
+{
+	"name": "orange",
+	"hex": "orange"
+},
+{
+	"name": "yellow",
+	"hex": "yellow"
 }
 ]

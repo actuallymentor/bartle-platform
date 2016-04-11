@@ -1,3 +1,19 @@
+// Array ocurrence counter
+var occurrence = function (array) {
+	"use strict"
+	var result = {}
+    if (array instanceof Array) { // Check if input is array.
+    	array.forEach(function (v, i) {
+            if (!result[v]) { // Initial object property creation.
+                result[v] = [i] // Create an array for that property.
+            } else { // Same occurrences found.
+                result[v].push(i) // Fill the array.
+            }
+        })
+    }
+    return result;
+}
+
 function bartle_test (  ) {
 
 	// Keeps track of the number of answers submitted and records them
@@ -5,7 +21,13 @@ function bartle_test (  ) {
 		"answered_nr": 0 ,
 		"answers": [],
 		"ended": false,
-		"bartle_type": "default"
+		"bartle_type": "default",
+		"bartle_quotient": {
+			"killer": 0,
+			"achiever": 0,
+			"explorer": 0,
+			"socializer": 0
+		}
 	}
 
 	// Updates the UI to reflect progress
@@ -14,7 +36,12 @@ function bartle_test (  ) {
 
 		if ( this.progress.answered_nr ==  ( questions.length - 1 )  ) {
 			console.log ( 'Last question reached' ) 
-			this.submitDatabase ( { "action": "set_bartle", "value": this.progress.bartle_type } ) 
+			this.calculateBartleType (  ) 
+			this.submitDatabase ( {
+				"action": "set_bartle",
+				"type": this.progress.bartle_type,
+				"bartle_quotient": this.progress.bartle_quotient
+			} ) 
 			this.progress.ended = true;
 			stroop_test.takeOver (  ) 
 		} else {
@@ -44,6 +71,20 @@ function bartle_test (  ) {
 		})
 	}
 
+	this.calculateBartleType =  function (  ) {
+		bartle_count = occurrence ( this.progress.answers ) 
+		// TODO Implement isset check
+		this.progress.bartle_quotient.killer =  Math.floor ( bartle_count['K']['length'] / .39 ) 
+		this.progress.bartle_quotient.achiever =  Math.floor ( bartle_count['A']['length'] / .39 ) 
+		this.progress.bartle_quotient.explorer =  Math.floor ( bartle_count['E']['length'] / .39 ) 
+		this.progress.bartle_quotient.socializer =  Math.floor ( bartle_count['S']['length'] / .39 )
+
+		this.progress.bartle_type = '' // TODO Set the highest stpe here
+	
+
+
+	}
+
 	// Debugging statement
 	console.log ( "Bartle test prototype initiated" )
 }
@@ -57,7 +98,9 @@ function stroop_test  (  ) {
 
 	this.takeOver = function (  ) {
 		stroop_test.updateUI (  ) 
+		$ ( "#question" ).text ( "Which color is this sentence?" ) 
 		$ ( "#experiment_message" ).text ( "Continue this task for as long as you like." ) 
+		$ ( "#instructions" ).text ( "" ) 
 	}
 
 	// Updates the UI to reflect progress

@@ -11,8 +11,19 @@ if  ( !isset ( $_POST['action'] )  ) {
 
 if  ( $_POST['action'] == "set_bartle" ) {
 
-	$statement = $db->prepare("INSERT INTO Results (bartle_type) VALUES ( :bartle )");
-	$statement->bindParam(":bartle", $_POST['value']);
+	$statement = $db->prepare("INSERT INTO Results 
+		(bartle_type, killer_quotient, achiever_quotient, explorer_quotient, socializer_quotient) 
+		VALUES ( :bartle, :killer, :achiever, :explorer, :socializer )"
+		);
+
+	$statement->bindParam(":bartle", $_POST['type']);
+
+	$statement->bindParam(":killer", $_POST['bartle_quotient']['killer']);
+	$statement->bindParam(":achiever", $_POST['bartle_quotient']['achiever']);
+	$statement->bindParam(":explorer", $_POST['bartle_quotient']['explorer']);
+	$statement->bindParam(":socializer", $_POST['bartle_quotient']['socializer']);
+
+	print_r ( $_POST['bartle_quotient'] ); 
 
 	pdo_try_catch  ( $statement  );
 

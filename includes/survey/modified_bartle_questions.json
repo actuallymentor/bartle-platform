@@ -1,11 +1,4 @@
-/* Note: amount of answer types: {
-	K: 21,
-	A: 19,
-	E: 19,
-	S: 19
-}
-*/
-var questions = [
+[
 {
 
 	"question": "Are you more comfortable:",

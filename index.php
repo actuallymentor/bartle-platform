@@ -28,7 +28,7 @@ REQUIRE ( 'includes/header.php' );
 						<li>A brief questionnaire</li>
 						<li>A simple task</li>
 					</ol>
-					<a href="bartle.php" class="col l4 m4 offset-m1 s4 offset-s1 waves-effect waves-light btn">Start Test</a>
+					<a href="instructions.php" class="col l4 m4 offset-m1 s4 offset-s1 waves-effect waves-light btn">Start Test</a>
 					<hr class="col l8 offset-l2 m10 offset-m1 s12" />
 					<p class="vague center col l8 offset-l2 m10 offset-m1 s12">For questions contact mentor (at) palokaj.co</p>
 				</div>

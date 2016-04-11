@@ -8,7 +8,10 @@ body {
   body hr {
     margin-bottom: 30px; }
   body a.btn {
-    background-color: #FF9800; }
+    background-color: #FF9800;
+    height: auto;
+    line-height: 20px;
+    padding: 10px !important; }
     body a.btn:hover {
       background-color: #FF9800;
       opacity: 0.5; }
@@ -24,7 +27,7 @@ nav #menubar {
   background-color: #C8E6C9;
   padding-bottom: 50px; }
   #header-well .container {
-    min-height: 100px; }
+    min-height: 200px; }
 
 .body.card {
   min-height: 300px; }
