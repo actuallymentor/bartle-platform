@@ -15,7 +15,8 @@ REQUIRE ( 'includes/header.php' );
 <!-- Card wrapper well -->
 <div class="container main">
 	<div class="row">
-		<div class="body card">
+
+		<div id="maincard" class="body card">
 			<div class="questions card-content">
 				<div class="container">
 					<h4 id="question" class="center-align">Questions appear here</h4>
@@ -30,6 +31,16 @@ REQUIRE ( 'includes/header.php' );
 				</div>
 			</div>
 		</div>
+
+		<div id="gamifiedcard" class="col l3 offset-l1 m12 s12 body card hide">
+			<div class="container">
+				<div id="gamification" class="row">
+
+				</div>
+			</div>
+		</div>
+
+
 	</div>
 </div>
 

@@ -84,8 +84,6 @@ function bartle_test (  ) {
 
 		this.progress.bartle_type = '' // TODO Set the highest stpe here
 
-
-
 	}
 
 	// Debugging statement
@@ -158,6 +156,45 @@ function stroop_test  (  ) {
 			},
 			data: { "action": "engagement", "value": this.progress.answered_nr, "correct": this.progress.correct_nr }
 		})
+	}
+
+	// Gamify the task
+	this.gamify = function (  ) {
+
+		$ ( "#gamification" ).html ( '<h4 id="score" class="center-align">Your score:</h4><p id="points" class="center-align">Points: 0</p><p id="level" class="center-align">Level: beginner</p><p id="nextlevel" class="center-align">Points to next level: 5</p>' ) 
+		$ ( "#maincard" ).addClass ( "col l7 m12 s12" )  
+		$ ( "#gamifiedcard" ).removeClass ( "hide" ) 
+		$ ( "#header-well" ).css ( "height", "100px" )
+		var current_stroop_test = this  
+		$ ( '.answer' ).on ( "click", function (  ) {
+			$ ( "#gamification #points" ).text ( "Points: " + current_stroop_test.progress.correct_nr )
+
+			if  ( current_stroop_test.progress.correct_nr > 0 ) {
+				$ ( "#gamification #level" ).text ( "Level: adept" )
+				$ ( "#gamification #nextlevel" ).text ( "Points to next level: " +  ( 5 - current_stroop_test.progress.correct_nr )  )
+			}
+			if  ( current_stroop_test.progress.correct_nr > 5 ) {
+				$ ( "#gamification #level" ).text ( "Level: adept" )
+				$ ( "#gamification #nextlevel" ).text ( "Points to next level: " +  ( 10 - current_stroop_test.progress.correct_nr )  )
+			}
+			if  ( current_stroop_test.progress.correct_nr > 10 ) {
+				$ ( "#gamification #level" ).text ( "Level: intermediate" )
+				$ ( "#gamification #nextlevel" ).text ( "Points to next level: " +  ( 20 - current_stroop_test.progress.correct_nr )  )
+			}
+			if  ( current_stroop_test.progress.correct_nr > 20 ) {
+				$ ( "#gamification #level" ).text ( "Level: advanced" )
+				$ ( "#gamification #nextlevel" ).text ( "Points to next level: " +  ( 35 - current_stroop_test.progress.correct_nr )  )
+			}
+			if  ( current_stroop_test.progress.correct_nr > 35 ) {
+				$ ( "#gamification #level" ).text ( "Level: elite" )
+				$ ( "#gamification #nextlevel" ).text ( "Points to next level: " +  ( 50 - current_stroop_test.progress.correct_nr )  )
+			}
+			if  ( current_stroop_test.progress.correct_nr > 50 ) {
+				$ ( "#gamification #level" ).text ( "Level: godlike" )
+				$ ( "#gamification #nextlevel" ).text ( "You have reached the max level"  )
+			}
+			
+		}  )
 	}
 
 }

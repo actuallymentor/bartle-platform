@@ -30,7 +30,7 @@ nav #menubar {
     min-height: 200px; }
 
 .body.card {
-  min-height: 300px; }
+  min-height: 100px; }
 
 .container.main {
   margin-top: -50px; }
