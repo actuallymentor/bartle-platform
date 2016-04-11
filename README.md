@@ -1,6 +1,15 @@
 # A Bartle test system
 
-Using this for a research project
+Using this for a research project.
+
+# Installation instructions
+
+The system is easily implemented:
+
+- Upload the files to a LAMP/LEMP server
+- Create a database with the below SQL code
+- Set your database settings in database/config.ini  ( protect this file)
+- You're up
 
 # Database setup sql
 
