@@ -22,7 +22,6 @@ function bartle_test (  ) {
 		"answers": [],
 		"ended": false,
 		"bartle_type": "default",
-		"gamified": 0,
 		"bartle_quotient": {
 			"killer": 0,
 			"achiever": 0,
@@ -51,8 +50,7 @@ function bartle_test (  ) {
 			this.submitDatabase ( {
 				"action": "set_bartle",
 				"type": this.progress.bartle_type,
-				"bartle_quotient": this.progress.bartle_quotient,
-				"gamified": this.progress.gamified
+				"bartle_quotient": this.progress.bartle_quotient
 			} ) 
 			this.progress.ended = true
 			stroop_test.takeOver (  ) 
@@ -94,7 +92,8 @@ function stroop_test  (  ) {
 	this.progress = {
 		"answered_nr": 0,
 		"correct_nr": 0,
-		"next_correct": "one"
+		"next_correct": "one",
+		"gamified": 0
 	}
 
 	this.takeOver = function (  ) {
@@ -143,6 +142,7 @@ function stroop_test  (  ) {
 			console.log ( "WRONG!" ) 
 		}
 
+		stroop_test.submitDatabase (  ) 
 		this.updateUI (  )
 	}
 	// Submit data to database
@@ -154,13 +154,14 @@ function stroop_test  (  ) {
 			success: function (data, status) {
 				console.log ( "Ajax data: " + data + "\nStatus: " + status )
 			},
-			data: { "action": "engagement", "value": this.progress.answered_nr, "correct": this.progress.correct_nr }
+			data: { "action": "engagement", "value": this.progress.answered_nr, "correct": this.progress.correct_nr, "gamified": this.progress.gamified }
 		})
 	}
 
 	// Gamify the task
 	this.gamify = function (  ) {
 
+		this.progress.gamified = 1
 		$ ( "#gamification" ).html ( '<h4 id="score" class="center-align">Your score:</h4><p id="points" class="center-align">Points: 0</p><p id="level" class="center-align">Level: beginner</p><p id="nextlevel" class="center-align">Points to next level: 5</p>' ) 
 		$ ( "#maincard" ).addClass ( "col l7 m12 s12" )  
 		$ ( "#gamifiedcard" ).removeClass ( "hide" ) 
@@ -220,7 +221,6 @@ $ ( '.answer' ).on ( "click", function (  ) {
 	} else {
 		// Record input to the Stroop test
 		stroop_test.recordInput ( clicked_element ) 
-		stroop_test.submitDatabase (  ) 
 		console.log ( stroop_test.progress ) 
 	}
 
