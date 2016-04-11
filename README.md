@@ -10,6 +10,7 @@ CREATE TABLE Results
 ID int NOT NULL AUTO_INCREMENT,
 bartle_type varchar(255),
 interactions varchar(255),
+interactions_correct varchar(255),
 PRIMARY KEY (ID)
 )
 `

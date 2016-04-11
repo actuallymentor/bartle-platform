@@ -4,7 +4,8 @@ function bartle_test (  ) {
 	this.progress = {
 		"answered_nr": 0 ,
 		"answers": [],
-		"ended": false
+		"ended": false,
+		"bartle_type": "default"
 	}
 
 	// Updates the UI to reflect progress
@@ -13,6 +14,7 @@ function bartle_test (  ) {
 
 		if ( this.progress.answered_nr ==  ( questions.length - 1 )  ) {
 			console.log ( 'Last question reached' ) 
+			this.submitDatabase ( { "action": "set_bartle", "value": this.progress.bartle_type } ) 
 			this.progress.ended = true;
 			stroop_test.takeOver (  ) 
 		} else {
@@ -27,6 +29,19 @@ function bartle_test (  ) {
 		this.progress.answers.push ( givenanswer )
 		this.progress.answered_nr ++
 		this.updateUI (  ) 
+	}
+
+	// Submit data to database
+	this.submitDatabase = function  ( data ) {
+		$.ajax({
+			url: 'record-api.php',
+			type: 'post',
+			dataType: 'json',
+			success: function (data, status) {
+				console.log ( "UID: " + data + "\nStatus: " + status )
+			},
+			data: data
+		})
 	}
 
 	// Debugging statement
@@ -84,6 +99,18 @@ function stroop_test  (  ) {
 
 		this.updateUI (  )
 	}
+	// Submit data to database
+	this.submitDatabase = function  (  ) {
+		$.ajax({
+			url: 'record-api.php',
+			type: 'post',
+			dataType: 'json',
+			success: function (data, status) {
+				console.log ( "Ajax data: " + data + "\nStatus: " + status )
+			},
+			data: { "action": "engagement", "value": this.progress.answered_nr, "correct": this.progress.correct_nr }
+		})
+	}
 
 }
 
@@ -108,6 +135,7 @@ $ ( '.answer' ).on ( "click", function (  ) {
 	} else {
 		// Record input to the Stroop test
 		stroop_test.recordInput ( clicked_element ) 
+		stroop_test.submitDatabase (  ) 
 		console.log ( stroop_test.progress ) 
 	}
 
