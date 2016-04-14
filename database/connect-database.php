@@ -82,4 +82,8 @@ function pdo_try_catch  ( $statement  ) {
 	}
 }
 
+if  ( $config['debug'] ) {
+		print_r (  unsafe_query ( 'select * from Results;', $db ) ) ;  
+	} 
+
 ?>
