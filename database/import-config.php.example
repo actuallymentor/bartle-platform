@@ -1,6 +1,6 @@
 <?php
 // This file imports the config ini and can be used to define other central helper resources
-if ( ! defined('ABSPATH')) exit('How about no');
+if ( ! defined('ABSPATH') && !$config['debug']) exit('How about no');
 ///////////////////
 // Get the ini file
 ///////////////////
