@@ -1,17 +1,19 @@
 <?php
+
 // This file imports the config ini and can be used to define other central helper resources
+
 ///////////////////
 // Get the ini file
 ///////////////////
-shell_exec ( 'touch database/config.ini' ); 
+
 $config = [
 	'debug' => true,
 	'db' => [
 		'type' => 'mysql',
 		'host' => 'localhost',
-		'user' => 'root', // Use actual values here of course
-		'password' => 'root', // Use actual values here of course
-		'name' => 'thesis_bartle'
+		'user' => 'root',
+		'password' => 'root',
+		'name' => 'bartle'
 			]
 ];
 
