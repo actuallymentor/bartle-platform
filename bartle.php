@@ -49,7 +49,8 @@ REQUIRE ( 'includes/header.php' );
 
 <script src="includes/survey/questions.js"></script>
 <script src="includes/survey/stroop_colors.js"></script>
-<script src="includes//survey/survey.js"></script>
+<script src="includes/underscore-min.js"></script>
+<script src="includes/survey/survey.js"></script>
 
 <?php if  ( isset ( $_GET['gfd'] )  ) {
 	?>

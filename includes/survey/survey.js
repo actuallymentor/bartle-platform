@@ -75,12 +75,28 @@ function bartle_test (  ) {
 	this.calculateBartleType =  function (  ) {
 		bartle_count = occurrence ( this.progress.answers ) 
 		// TODO Implement isset check
-		this.progress.bartle_quotient.killer =  Math.floor ( bartle_count['K']['length'] / .39 ) 
-		this.progress.bartle_quotient.achiever =  Math.floor ( bartle_count['A']['length'] / .39 ) 
-		this.progress.bartle_quotient.explorer =  Math.floor ( bartle_count['E']['length'] / .39 ) 
-		this.progress.bartle_quotient.socializer =  Math.floor ( bartle_count['S']['length'] / .39 )
+		if  ( bartle_count['K'] != undefined ) {
+			this.progress.bartle_quotient.killer =  Math.floor ( bartle_count['K']['length'] / .39 ) 
+		} else {
+			this.progress.bartle_quotient.killer = 0
+		}
+		if  ( bartle_count['A'] != undefined ) {
+			this.progress.bartle_quotient.achiever =  Math.floor ( bartle_count['A']['length'] / .39 ) 
+		} else {
+			this.progress.bartle_quotient.achiever = 0
+		}
+		if  ( bartle_count['E'] != undefined ) {
+			this.progress.bartle_quotient.explorer =  Math.floor ( bartle_count['E']['length'] / .39 ) 
+		} else {
+			this.progress.bartle_quotient.explorer = 0
+		}
+		if  ( bartle_count['S'] != undefined ) {
+			this.progress.bartle_quotient.socializer =  Math.floor ( bartle_count['S']['length'] / .39 )
+		} else {
+			this.progress.bartle_quotient.socializer = 0
+		}
 
-		this.progress.bartle_type = '' // TODO Set the highest stpe here
+		this.progress.bartle_type = _.invert(this.progress.bartle_quotient)[_.max(this.progress.bartle_quotient)]
 
 	}
 
