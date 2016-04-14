@@ -104,7 +104,7 @@ function stroop_test  (  ) {
 		if  ( gamification == true ) {
 			// This variable is created on the bartle.php webpage
 			this.gamify (  ) 
-		} 
+		}
 	}
 
 	// Updates the UI to reflect progress
@@ -229,16 +229,3 @@ $ ( '.answer' ).on ( "click", function (  ) {
 	}
 
 }  )
-
-
-
-
-
-
-
-
-
-
-
-
-
