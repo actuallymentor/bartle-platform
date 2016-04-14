@@ -8,7 +8,7 @@ The system is easily implemented:
 
 - Upload the files to a LAMP/LEMP server
 - Create a database with the below SQL code
-- Set your database settings in database/config.ini  (see example, protect this file)
+- Set your database settings in database/import-config.php
 - You're up
 
 Optionall use the deploy.ssh script

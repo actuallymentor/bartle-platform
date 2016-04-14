@@ -10,8 +10,8 @@ $config = [
 	'db' => [
 		'type' => 'mysql',
 		'host' => 'localhost',
-		'user' => 'root',
-		'password' => 'root',
+		'user' => 'root', // Use actual values here of course
+		'password' => 'root', // Use actual values here of course
 		'name' => 'thesis_bartle'
 			]
 ];
