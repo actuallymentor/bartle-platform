@@ -3,10 +3,6 @@
 
 // Load config if not loaded
 
-if  ( $config['debug'] ) {
-	echo 'Loading config';
-} 
-
 if  ( !isset ( $config )  ) {
 	REQUIRE ( 'import-config.php' ); 
 } else {
@@ -36,6 +32,8 @@ try {
 	// Set the error type so we can use try catch
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+	print_r ( $db ); 
+
 	if  ( $config['debug'] ) {
 		echo 'Connection made';
 	} 
@@ -46,6 +44,7 @@ try {
 		// If debugging is on, log the error
 		$ex->getMessage();
 		log_error ( $ex );
+		print_r ( $ex->getMessage() ) ;
 	}
 }
 
