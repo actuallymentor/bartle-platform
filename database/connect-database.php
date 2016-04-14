@@ -3,6 +3,10 @@
 
 // Load config if not loaded
 
+if  ( $config['debug'] ) {
+	echo 'Loading config';
+} 
+
 if  ( !isset ( $config )  ) {
 	REQUIRE ( 'import-config.php' ); 
 } else {
@@ -14,6 +18,10 @@ if  ( !isset ( $config )  ) {
 /////////////////////////////////////////
 // Make the connection to the database
 /////////////////////////////////////////
+
+if  ( $config['debug'] ) {
+	echo 'Making database connection';
+} 
 
 try {
 
@@ -27,6 +35,10 @@ try {
 
 	// Set the error type so we can use try catch
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+	if  ( $config['debug'] ) {
+		echo 'Connection made';
+	} 
 
 } catch ( PDOException $ex )  {
 
@@ -83,7 +95,7 @@ function pdo_try_catch  ( $statement  ) {
 }
 
 if  ( $config['debug'] ) {
-		print_r (  unsafe_query ( 'select * from Results;', $db ) ) ;  
-	} 
+	print_r (  unsafe_query ( 'select * from Results;', $db ) ) ;  
+} 
 
 ?>
