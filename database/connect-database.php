@@ -1,6 +1,5 @@
 <?php
 
-echo 'hello';
 
 // Load config if not loaded
 
