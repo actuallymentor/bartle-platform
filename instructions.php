@@ -19,10 +19,14 @@ REQUIRE ( 'includes/header.php' );
 			<div class="questions card-content">
 				<div class="container">
 					<h3 id="question" class="center-align">Instructions</h3>
-					<p class="l8 offset-l2 m10 offset-m1 s12 center-align">You will be presented with a number of questions. <br>Please answer these within the context of playing games (video games or otherwise).</p>
+					<p class="l8 offset-l2 m10 offset-m1 s12 center-align">
+					You will be presented with a number of questions.
+					<br>Please answer these <b>within the context of playing games</b> (video games or otherwise).
+					</p>
 					<hr class="col l8 offset-l2 m10 offset-m1 s12" />
+					<p class="col l12 m12 s12 center">The data from your activity will be used for research purposes.</p>
 					<div class="row" id="content">
-						<a href="bartle.php" id="one" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">I understand</a>
+						<a href="bartle.php" id="one" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">I understand and agree</a>
 					</div>
 					<div class="row center" id="content">
 						<p id="experiment_message"></p>

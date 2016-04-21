@@ -18,7 +18,7 @@ function bartle_test (  ) {
 
 	// Keeps track of the number of answers submitted and records them
 	this.progress = {
-		"answered_nr": 0 ,
+		"answered_nr": 0,
 		"answers": [],
 		"ended": false,
 		"bartle_type": "default",
@@ -36,6 +36,7 @@ function bartle_test (  ) {
 
 		$ ( '.answer#one' ).text ( questions[ this.progress.answered_nr ].one.text )
 		$ ( '.answer#two' ).text ( questions[ this.progress.answered_nr ].two.text )
+		$ ( '#progress .determinate' ).css ( "width",  ( this.progress.answered_nr / questions.length ) * 100 + "%" )  
 
 	}
 
@@ -113,7 +114,9 @@ function stroop_test  (  ) {
 	}
 
 	this.takeOver = function (  ) {
+		$ ( "#progress" ) .text ( '' ) 
 		$ ( "#question" ).text ( "Instructions" )
+		$ ( "#question" ).css ( { 'background-color': $ ( '#header-well' ).css ( 'background-color' ), 'padding': '10px'   } )  
 		$ ( "#instructions" ).text ( "You will now be be asked to complete a task. You may continue for as long as you like." ) 
 		$ ( ".answer" ).text ( "" )
 		$ ( "#one" ).text ( "I understand" )

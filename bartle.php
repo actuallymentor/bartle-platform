@@ -28,6 +28,12 @@ REQUIRE ( 'includes/header.php' );
 						<a id="one" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">Option 1 appears here</a>
 						<a id="two" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">Option 2 appears here</a>
 					</div>
+					<div id="progress" class="row">
+						<p class="center">Progress:</p>
+						<div class="progress col l8 offset-l2 m10 offset-m1 s12">
+							<div class="determinate" style="width: 1%"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
