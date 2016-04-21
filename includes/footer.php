@@ -19,5 +19,15 @@
 	console.log ( "You should check out this SUPER MEGA IMPORTANT LINK: http://bit.ly/important-link" )
 	console.log ( "------------------------------------------------------------------" )
 </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11561065-19', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
