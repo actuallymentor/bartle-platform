@@ -259,7 +259,6 @@ $ ( '.answer' ).on ( "click", function (  ) {
 			$ ( '#progress .determinate' ).css ( "width", "100%")
 			window.setInterval( progressBar, 100 )
 		}
-		console.log ( stroop_test.progress ) 
 
 		// Record input to the Stroop test
 		stroop_test.recordInput ( clicked_element ) 
