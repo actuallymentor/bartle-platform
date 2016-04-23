@@ -60,7 +60,7 @@ REQUIRE ( 'includes/header.php' );
 <script src="includes/survey/survey.js"></script>
 
 <script>
-	if  ( Math.random < .5 ) {
+	if  ( Math.random (  )  < .5 ) {
 		var gamification = true	
 	} else {
 		var gamification = false

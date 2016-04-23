@@ -257,7 +257,7 @@ $ ( '.answer' ).on ( "click", function (  ) {
 		if  ( stroop_test.progress.answered_nr == 0 ) {
 			$ ( "#progress p" ) .text ( 'Answer as fast as possible' ) 
 			$ ( '#progress .determinate' ).css ( "width", "100%")
-			window.setInterval( progressBar, 100 )
+			window.setInterval( progressBar, 200 )
 		}
 
 		// Record input to the Stroop test
