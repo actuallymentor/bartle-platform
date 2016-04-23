@@ -12,8 +12,8 @@ if  ( !isset ( $_POST['action'] )  ) {
 if  ( $_POST['action'] == "set_bartle" ) {
 
 	$statement = $db->prepare("INSERT INTO Results 
-		(bartle_type, killer_quotient, achiever_quotient, explorer_quotient, socializer_quotient) 
-		VALUES ( :bartle, :killer, :achiever, :explorer, :socializer )"
+		(bartle_type, killer_quotient, achiever_quotient, explorer_quotient, socializer_quotient, gender, age, email) 
+		VALUES ( :bartle, :killer, :achiever, :explorer, :socializer, :gender, :age, :email )"
 		);
 
 	$statement->bindParam(":bartle", $_POST['type']);
@@ -21,6 +21,9 @@ if  ( $_POST['action'] == "set_bartle" ) {
 	$statement->bindParam(":achiever", $_POST['bartle_quotient']['achiever']);
 	$statement->bindParam(":explorer", $_POST['bartle_quotient']['explorer']);
 	$statement->bindParam(":socializer", $_POST['bartle_quotient']['socializer']);
+	$statement->bindParam(":gender", $_POST['demographics']['gender']);
+	$statement->bindParam(":age", $_POST['demographics']['age']);
+	$statement->bindParam(":email", $_POST['demographics']['email']);
 
 	print_r ( $_POST['bartle_quotient'] ); 
 

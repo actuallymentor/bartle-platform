@@ -31,9 +31,9 @@ REQUIRE ( 'includes/header.php' );
 							</select>
 							<label>What is your gender?</label>
 							<select name="gender" style="display: block!important;">
-								<option>Male</option>
-								<option>Female</option>
-								<option>Other</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+								<option value="other">Other</option>
 							</select>
 							<label>What is your email? (Optional)</label>
 							<input type="email" name="email"></input>

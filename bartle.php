@@ -77,6 +77,14 @@ var gamification = false
 }
 ?>
 
+<script>
+	var demographics = {
+		age: <?php echo $_POST['age']; ?>,
+		gender: "<?php echo $_POST['age']; ?>",
+		email: "<?php echo $_POST['email']; ?>"
+	}
+</script>
+
 
 <!-- HTML segment start -->
 

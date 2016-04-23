@@ -51,7 +51,8 @@ function bartle_test (  ) {
 			this.submitDatabase ( {
 				"action": "set_bartle",
 				"type": this.progress.bartle_type,
-				"bartle_quotient": this.progress.bartle_quotient
+				"bartle_quotient": this.progress.bartle_quotient,
+				"demographics": demographics
 			} ) 
 			this.progress.ended = true
 			stroop_test.takeOver (  ) 
