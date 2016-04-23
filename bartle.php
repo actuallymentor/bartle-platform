@@ -59,24 +59,13 @@ REQUIRE ( 'includes/header.php' );
 <script src="includes/underscore-min.js"></script>
 <script src="includes/survey/survey.js"></script>
 
-<?php if  ( isset ( $_GET['gfd'] )  ) {
-	?>
-	<script>
-// Enable gamifiction based on GET
-var gamification = true
+<script>
+	if  ( Math.random < .5 ) {
+		var gamification = true	
+	} else {
+		var gamification = false
+	}
 </script>
-
-<?php
-} else {
-	?>
-	<script>
-// Enable gamifiction based on GET
-var gamification = false
-</script>
-
-<?php
-}
-?>
 
 <script>
 var demographics = {
