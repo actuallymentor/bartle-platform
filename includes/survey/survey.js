@@ -115,8 +115,7 @@ function stroop_test  (  ) {
 	}
 
 	this.takeOver = function (  ) {
-		$ ( "#progress p" ) .text ( 'Answer as fast as possible' ) 
-		$ ( '#progress .determinate' ).css ( "width", "100%")
+		
 		$ ( "#question" ).text ( "Instructions" )
 		$ ( "#question" ).css ( { 'background-color': $ ( '#header-well' ).css ( 'background-color' ), 'padding': '10px'   } )  
 		$ ( "#instructions" ).text ( "You will now be be asked to complete a task. You may continue for as long as you like." ) 
@@ -127,14 +126,6 @@ function stroop_test  (  ) {
 			// This variable is created on the bartle.php webpage
 			this.gamify (  ) 
 		}
-		var speedcount = 100
-		window.setInterval(function(){
-			if  ( speedcount >= 0 ) {
-				$ ( "#progress p" ) .text ( 'Answer as fast as possible: ' + speedcount )
-				$ ( '#progress .determinate' ).css ( "width",   ( speedcount -= 5 )  + "%" )
-			}
-
-		}, 300)
 	}
 
 	// Updates the UI to reflect progress
@@ -234,8 +225,16 @@ function stroop_test  (  ) {
 
 }
 
+function progressBar ( ) {
+	if  ( speedcount >= 0 ) {
+		$ ( "#progress p" ) .text ( 'Answer as fast as possible: ' + speedcount )
+		$ ( '#progress .determinate' ).css ( "width",   ( speedcount -= 5 )  + "%" )
+	}
+}
+
 var bartle_test = new bartle_test (  )
 var stroop_test = new stroop_test (  ) 
+var speedcount = 100
 
 // Start questionaire workflow when DOM has loaded
 $ ( document ).ready ( function (  ) {
@@ -253,9 +252,20 @@ $ ( '.answer' ).on ( "click", function (  ) {
 		bartle_test.recordInput ( clicked_element )
 		console.log ( bartle_test.progress )
 	} else {
+		// Activate progress bar
+		var speedcount = 100
+		if  ( stroop_test.progress.answered_nr == 0 ) {
+			$ ( "#progress p" ) .text ( 'Answer as fast as possible' ) 
+			$ ( '#progress .determinate' ).css ( "width", "100%")
+			window.setInterval( progressBar, 100 )
+		}
+		console.log ( stroop_test.progress ) 
+
 		// Record input to the Stroop test
 		stroop_test.recordInput ( clicked_element ) 
-		console.log ( stroop_test.progress ) 
 	}
 
 }  )
+$ ( '.answer' ).on ( "click", function  (  ) {
+	speedcount = 100
+} )
