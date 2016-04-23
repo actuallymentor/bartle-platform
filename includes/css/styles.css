@@ -29,6 +29,12 @@ nav #menubar {
   #header-well .container {
     min-height: 200px; }
 
+form#demographics {
+  padding: 30px 0; }
+  form#demographics label {
+    margin-top: 10px;
+    display: block; }
+
 .body.card {
   min-height: 100px; }
 

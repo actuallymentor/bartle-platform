@@ -79,7 +79,7 @@ var gamification = false
 
 <script>
 	var demographics = {
-		age: <?php echo $_POST['age']; ?>,
+		age: "<?php echo $_POST['gender']; ?>",
 		gender: "<?php echo $_POST['age']; ?>",
 		email: "<?php echo $_POST['email']; ?>"
 	}

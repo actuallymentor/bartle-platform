@@ -23,7 +23,7 @@ REQUIRE ( 'includes/header.php' );
 						You will be presented with a number of questions.
 						<br>Please answer these <b>within the context of playing games</b> (video games or otherwise).
 					</p>
-					<form action="bartle.php" method="POST">
+					<form id="demographics" action="bartle.php" method="POST">
 						<div class="col l8 offset-l2 m10 offset-m1 s23">
 							<label>What is your age?</label>
 							<select name="age" style="display: block!important;">
