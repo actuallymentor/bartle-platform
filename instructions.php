@@ -20,14 +20,28 @@ REQUIRE ( 'includes/header.php' );
 				<div class="container">
 					<h3 id="question" class="center-align">Instructions</h3>
 					<p class="l8 offset-l2 m10 offset-m1 s12 center-align">
-					You will be presented with a number of questions.
-					<br>Please answer these <b>within the context of playing games</b> (video games or otherwise).
+						You will be presented with a number of questions.
+						<br>Please answer these <b>within the context of playing games</b> (video games or otherwise).
 					</p>
-					<hr class="col l8 offset-l2 m10 offset-m1 s12" />
-					<p class="col l12 m12 s12 center">The data from your activity will be used for research purposes.</p>
-					<div class="row" id="content">
-						<a href="bartle.php" id="one" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn">I understand and agree</a>
-					</div>
+					<form action="bartle.php" method="POST">
+						<div class="col l8 offset-l2 m10 offset-m1 s23">
+							<label>What is your age?</label>
+							<select name="age" style="display: block!important;">
+								<option value="18">Under 18</option>
+							</select>
+							<label>What is your gender?</label>
+							<select name="gender" style="display: block!important;">
+								<option>Male</option>
+								<option>Female</option>
+								<option>Other</option>
+							</select>
+							<label>What is your email? (Optional)</label>
+							<input type="email" name="email"></input>
+							<input id="one" class="answer col l10 offset-l1 m12 s12 waves-effect waves-light btn" type="submit" value="I Understand and Agree"></input>
+						</div>
+						<hr class="col l8 offset-l2 m10 offset-m1 s12" />
+						<p class="col l12 m12 s12 center">The data from your activity will be used for research purposes.</p>
+					</form>
 					<div class="row center" id="content">
 						<p id="experiment_message"></p>
 					</div>
