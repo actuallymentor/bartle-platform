@@ -28,6 +28,10 @@ REQUIRE ( 'includes/header.php' );
 							<label>What is your age?</label>
 							<select name="age" style="display: block!important;">
 								<option value="18">Under 18</option>
+								<option value="18-25">18-25</option>
+								<option value="25-35">25-35</option>
+								<option value="35-50">35-50</option>
+								<option value="50">Over 50</option>
 							</select>
 							<label>What is your gender?</label>
 							<select name="gender" style="display: block!important;">
