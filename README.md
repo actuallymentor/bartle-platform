@@ -27,6 +27,9 @@ killer_quotient varchar(255),
 achiever_quotient varchar(255),
 explorer_quotient varchar(255),
 socializer_quotient varchar(255),
+age varchar(255),
+gender varchar(255),
+email varchar(255),
 timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 PRIMARY KEY (ID)
 )
