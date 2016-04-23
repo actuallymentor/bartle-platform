@@ -35,6 +35,14 @@ form#demographics {
     margin-top: 10px;
     display: block; }
 
+@media screen and (max-width: 996px) {
+  #intro {
+    text-align: center; }
+    #intro ol {
+      list-style: none; }
+    #intro a {
+      margin-top: 20px;
+      margin-bottom: 20px; } }
 .body.card {
   min-height: 100px; }
 
@@ -45,6 +53,11 @@ form#demographics {
   margin: 10px 0; }
 .questions hr {
   margin-bottom: 10px; }
+
+#subtext {
+  margin: 10px 0;
+  opacity: 0.5;
+  font-style: italic; }
 
 #content #instructions {
   margin-bottom: 30px; }

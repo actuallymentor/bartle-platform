@@ -20,6 +20,7 @@ REQUIRE ( 'includes/header.php' );
 			<div class="questions card-content">
 				<div class="container">
 					<h4 id="question" class="center-align">Questions appear here</h4>
+					<p id="subtext" class="center-align">Please answer these within the context of playing games (video games or otherwise).</p>
 					<div class="nopadnomar row">
 						<hr class="col l8 offset-l2 m10 offset-m1 s12" />
 					</div>
@@ -78,11 +79,14 @@ var gamification = false
 ?>
 
 <script>
-	var demographics = {
-		age: "<?php echo $_POST['gender']; ?>",
-		gender: "<?php echo $_POST['age']; ?>",
-		email: "<?php echo $_POST['email']; ?>"
+var demographics = {
+		age: "default",
+		gender: "default",
+		email: "default"
 	}
+	demographics['age'] = "<?php if (isset($_POST['age']) ) {echo $_POST['age'];} ?>"
+	demographics['gender'] = "<?php if (isset($_POST['gender']) ) {echo $_POST['gender'];} ?>"
+	demographics['email'] = "<?php if (isset($_POST['email']) ) {echo $_POST['email'];} ?>"
 </script>
 
 

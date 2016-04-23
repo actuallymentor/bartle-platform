@@ -74,6 +74,21 @@ form#demographics {
 	}
 }
 
+// Index
+
+@media screen and  ( max-width: 996px ) {
+	#intro {
+		text-align: center;
+		ol {
+			list-style: none;
+		}
+		a {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+} 
+
 
 // General
 
@@ -94,6 +109,11 @@ form#demographics {
 	hr {
 		margin-bottom: 10px;
 	}
+}
+#subtext {
+	margin: 10px 0;
+    opacity: 0.5;
+    font-style: italic;
 }
 
 #content{

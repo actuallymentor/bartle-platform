@@ -115,16 +115,25 @@ function stroop_test  (  ) {
 	}
 
 	this.takeOver = function (  ) {
-		$ ( "#progress" ) .text ( '' ) 
+		$ ( "#progress p" ) .text ( 'Your speed:' ) 
+		$ ( '#progress .determinate' ).css ( "width", "100%")
 		$ ( "#question" ).text ( "Instructions" )
 		$ ( "#question" ).css ( { 'background-color': $ ( '#header-well' ).css ( 'background-color' ), 'padding': '10px'   } )  
 		$ ( "#instructions" ).text ( "You will now be be asked to complete a task. You may continue for as long as you like." ) 
 		$ ( ".answer" ).text ( "" )
+		$ ( "#subtext" ).text ( "Answer as fast as possible." )
 		$ ( "#one" ).text ( "I understand" )
 		if  ( gamification == true ) {
 			// This variable is created on the bartle.php webpage
 			this.gamify (  ) 
 		}
+		window.setInterval(function(){
+			var speedcount = $ ( '#progress .determinate' ).css ( "width")
+			if  ( speedcount > 0 ) {
+				$ ( '#progress .determinate' ).css ( "width",   ( speedcount -= 10 )  + "%" )
+			}
+
+		}, 500)
 	}
 
 	// Updates the UI to reflect progress
