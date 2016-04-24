@@ -118,7 +118,11 @@ function stroop_test  (  ) {
 		
 		$ ( "#question" ).text ( "Instructions" )
 		$ ( "#question" ).css ( { 'background-color': $ ( '#header-well' ).css ( 'background-color' ), 'padding': '10px'   } )  
-		$ ( "#instructions" ).text ( "You will now be be asked to complete a task. You may continue for as long as you like." ) 
+		if  ( gamification ) {
+			$ ( "#instructions" ).html ( "<p>You will now be be asked to complete a task. You may continue for as long as you like. There will be a countdown timer, please respond as fast as possible.</p><br><p>On the right you can see the points you gained doing this task. Every correct answer gives you one point.</p>" ) 
+		} else {
+			$ ( "#instructions" ).text ( "You will now be be asked to complete a task. You may continue for as long as you like. There will be a countdown timer, please respond as fast as possible." ) 
+		}
 		$ ( ".answer" ).text ( "" )
 		$ ( "#subtext" ).text ( '' )
 		$ ( "#one" ).text ( "I understand" )
