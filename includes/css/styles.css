@@ -35,6 +35,12 @@ form#demographics {
     margin-top: 10px;
     display: block; }
 
+i.answer.btn {
+  padding: 0 !important; }
+
+i.answer.btn input {
+  padding: 10px 20%; }
+
 @media screen and (max-width: 996px) {
   #intro {
     text-align: center; }
