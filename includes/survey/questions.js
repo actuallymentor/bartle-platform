@@ -332,7 +332,7 @@ var questions = [
 
 },
 {
-	"question": "Would rather join a clan/group of:",
+	"question": "Would you rather join a clan/group of:",
 	"one": {
 		"text": "Scholars",
 		"value": "E"
@@ -368,7 +368,7 @@ var questions = [
 
 },
 {
-	"question": "Would rather be known for",
+	"question": "Would you rather be known for",
 	"one": {
 		"text": "Knowledge",
 		"value": "E"
