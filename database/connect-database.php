@@ -32,10 +32,9 @@ try {
 	// Set the error type so we can use try catch
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	print_r ( $db ); 
-
 	if  ( $config['debug'] ) {
-		echo 'Connection made';
+		echo 'Connection made ';
+		print_r ( $db );
 	} 
 
 } catch ( PDOException $ex )  {
@@ -44,7 +43,9 @@ try {
 		// If debugging is on, log the error
 		$ex->getMessage();
 		log_error ( $ex );
-		print_r ( $ex->getMessage() ) ;
+		if  ( $config['debug'] ) {
+			print_r ( $ex->getMessage() ) ;
+		}
 	}
 }
 
