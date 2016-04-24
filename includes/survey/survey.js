@@ -124,7 +124,7 @@ function stroop_test  (  ) {
 			$ ( "#instructions" ).text ( "You will now be be asked to complete a task. You may continue for as long as you like. There will be a countdown timer, please respond as fast as possible." ) 
 		}
 		$ ( ".answer" ).text ( "" )
-		$ ( "#subtext" ).text ( '' )
+		$ ( "#subtext" ).text ( 'Continue for however long you like' )
 		$ ( "#one" ).text ( "I understand" )
 		if  ( gamification == true ) {
 			// This variable is created on the bartle.php webpage
