@@ -68,6 +68,10 @@ i.answer.btn input {
 #content #instructions {
   margin-bottom: 30px; }
 
+#endtask .btn {
+  background-color: grey;
+  margin-top: 10px; }
+
 footer.page-footer {
   background-color: #4CAF50; }
 

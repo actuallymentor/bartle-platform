@@ -125,7 +125,9 @@ function stroop_test  (  ) {
 		}
 		$ ( ".answer" ).text ( "" )
 		$ ( "#subtext" ).text ( 'Continue for however long you like' )
-		$ ( "#one" ).text ( "I understand" )
+		$ ( "#one" ).text ( "I understand" ) 
+		$ ( "#two" ).addClass ( 'hide' )  
+		$ ( "#progress" ).addClass ( 'hide' )
 		if  ( gamification == true ) {
 			// This variable is created on the bartle.php webpage
 			this.gamify (  ) 
@@ -244,31 +246,52 @@ var speedcount = 100
 $ ( document ).ready ( function (  ) {
 	console.log ( "Document load complete" )
 	bartle_test.updateUI (  )
-}  )
+	$ ( 'body' )
+	.on ( 'click', '.answer', function ( ) {
+		var clicked_element = $ ( this ).attr ( 'id' )
 
-// Record answer when buttons are clicked
-$ ( '.answer' ).on ( "click", function (  ) {
-
-	var clicked_element = $ ( this ).attr ( 'id' )
-
-	if  ( !bartle_test.progress.ended ) {
-		// Record input to the Bartle test
-		bartle_test.recordInput ( clicked_element )
-		console.log ( bartle_test.progress )
-	} else {
-		// Activate progress bar
-		var speedcount = 100
-		if  ( stroop_test.progress.answered_nr == 0 ) {
-			$ ( "#progress p" ) .text ( 'Answer as fast as possible' ) 
-			$ ( '#progress .determinate' ).css ( "width", "100%")
-			window.setInterval( progressBar, 200 )
+		if  ( !bartle_test.progress.ended ) {
+			// Record input to the Bartle test
+			bartle_test.recordInput ( clicked_element )
+			console.log ( bartle_test.progress )
+		} else {
+			// Record input to the Stroop test
+			stroop_test.recordInput ( clicked_element ) 
 		}
-
-		// Record input to the Stroop test
-		stroop_test.recordInput ( clicked_element ) 
-	}
+	} )
+	.on  ( 'click', '.answer', function (  ) {
+		if  ( bartle_test.progress.ended ) {
+			// Activate progress bar
+			if  ( stroop_test.progress.answered_nr == 1 ) {
+				$ ( "#progress p" ) .text ( 'Answer as fast as possible' ) 
+				$ ( '#progress .determinate' ).css ( "width", "100%")
+				$ ( "#two" ).removeClass ( 'hide' )  
+				$ ( "#endtask" ).removeClass ( 'hide' )
+				$ ( "#progress" ).removeClass ( 'hide' )
+				window.setInterval( progressBar, 200 )
+			}
+		}
+	} ) 
+	.on  ( 'click', '.answer', function (  ) {
+		// Reset the progressbar when answer is submitted
+		speedcount = 100
+	} ) 
+	.on ( 'click', '#endtask #pause', function (  ) {
+		// Resume ad pause button
+		var text = $ ( this ).text (  ) 
+		if  ( text == "Pause task" ) {
+			$ ( this ).text ( "Resume task" )  
+			$ ( '#progress' ).addClass ( 'hide' ) 
+		} else {
+			$ ( this ).text ( "Pause task" )  
+			$ ( '#progress' ).removeClass ( 'hide' ) 
+			speedcount = 100
+		}
+	} )
 
 }  )
-$ ( '.answer' ).on ( "click", function  (  ) {
-	speedcount = 100
-} )
+
+
+
+
+

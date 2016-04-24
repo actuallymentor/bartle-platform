@@ -35,6 +35,12 @@ REQUIRE ( 'includes/header.php' );
 							<div class="determinate" style="width: 1%"></div>
 						</div>
 					</div>
+					<div id="endtask" class="row hide">
+						<div class="col l8 offset-l2 m10 offset-m1 s12">
+							<a id="pause" class="btn col l5 m5 s12">Pause task</a>
+							<a href="thanks.php" class="btn col l5 m5 s12 offset-l2 offset-m2">End task</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -68,7 +74,7 @@ REQUIRE ( 'includes/header.php' );
 </script>
 
 <script>
-var demographics = {
+	var demographics = {
 		age: "default",
 		gender: "default",
 		email: "default"
