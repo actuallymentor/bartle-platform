@@ -27,7 +27,7 @@ var questions = [
 		"value": "A"
 	},
 	"two": {
-		"text": "Bragging about it to your friends?",
+		"text": "Bragging about it to your friends",
 		"value": "S"
 	}
 
@@ -101,11 +101,11 @@ var questions = [
 {
 	"question": "Which would you enjoy more?",
 	"one": {
-		"text": "Running your own tavern/hotel?",
+		"text": "Running your own tavern/hotel",
 		"value": "S"
 	},
 	"two": {
-		"text": "Making your own maps of the world, then selling them?",
+		"text": "Making your own maps of the world, then selling them",
 		"value": "E"
 	}
 
@@ -274,7 +274,7 @@ var questions = [
 {
 	"question": "Would you rather be known as:",
 	"one": {
-		"text": "Someone who can run from any two points in the world, and really knows their way around.",
+		"text": "Someone who can run from any two points in the world, and really knows their way around",
 		"value": "E"
 	},
 	"two": {
@@ -298,7 +298,7 @@ var questions = [
 {
 	"question": "Would you rather:",
 	"one": {
-		"text": "Know where to find things",
+		"text": "Know where to find things?",
 		"value": "E"
 	},
 	"two": {
@@ -458,7 +458,7 @@ var questions = [
 		"value": "A"
 	},
 	"two": {
-		"text": "An amulet that increases the damage you do against other players by 10%.",
+		"text": "An amulet that increases the damage you do against other players by 10%",
 		"value": "K"
 	}
 
