@@ -423,7 +423,7 @@
 {
 	"question": "Would you be more prone to brag about:",
 	"one": {
-		"text": "How may other players you've killed",
+		"text": "How many other players you've killed",
 		"value": "K"
 	},
 	"two": {
