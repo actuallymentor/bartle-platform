@@ -15,7 +15,7 @@ Optionall use the deploy.ssh script
 
 # Database setup sql
 
-`
+```SQL
 CREATE TABLE Results
 (
 ID int NOT NULL AUTO_INCREMENT,
@@ -33,4 +33,4 @@ email varchar(255),
 timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 PRIMARY KEY (ID)
 )
-`
+```
